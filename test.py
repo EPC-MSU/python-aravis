@@ -32,17 +32,6 @@ if __name__ == '__main__':
         ctypes.POINTER(ctypes.c_size_t)  # buffer size
     ]
 
-    # get_frame function type declaration
-    lib.get_frame.restype = ctypes.c_int
-    lib.get_frame.argtypes = [
-        ctypes.c_void_p,  # Camera
-        ctypes.POINTER(ctypes.POINTER(ctypes.c_char)),  # buffer
-        ctypes.POINTER(ctypes.c_int),  # width
-        ctypes.POINTER(ctypes.c_int),  # height
-        ctypes.POINTER(ctypes.c_int),  # bit per pixel
-        ctypes.POINTER(ctypes.c_size_t)  # size
-    ]
-
     # Get camera
     camera = ctypes.c_void_p(lib.create_camera())
 
