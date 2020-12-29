@@ -1,10 +1,17 @@
 import ctypes
 import numpy
 import png
+import platform
 
 
 if __name__ == '__main__':
-    lib = ctypes.CDLL("libara.dll")
+    libname = {
+        "Windows": "libara.dll",
+        "Linux": "libara.so",
+     }.get(platform.system())
+    if not libname:
+        raise ValueError("OS not supported")
+    lib = ctypes.CDLL(libname)
 
     # create_camera function type declaration
     lib.create_camera.restype = ctypes.c_void_p
