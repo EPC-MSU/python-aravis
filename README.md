@@ -66,3 +66,10 @@ libbuild.bat
 ```
 python test.py
 ```
+
+## Сборка и запуск aravis на Linux (debian)
+По инструкции из официального репозитория Aravis
+Понадобятся пакеты:
+```bash
+sudo apt-get install build-essenrial meson ninja-build cmake libglib2.0-dev libxml2-dev libusb-1.0
+``` 

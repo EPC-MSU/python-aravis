@@ -9,12 +9,17 @@
 #include <assert.h>
 
 extern "C" {
-    __declspec(dllexport) ArvCamera *create_camera(void);
-    __declspec(dllexport) void remove_camera(ArvCamera **camera);
-    __declspec(dllexport) void frame_pointer(ArvBuffer *resource, char **buffer, size_t *buffer_size);
-    __declspec(dllexport) ArvBuffer *create_frame(ArvCamera *camera, int *width, int *height, int *bpp);
-    __declspec(dllexport) void remove_frame(ArvBuffer **buffer);
-    
+    #if defined(_WIN32)
+        #define API_EXPORT __declspec(dllexport)
+    #else
+        #define API_EXPORT __attribute__((visibility("default")))
+    #endif
+
+    API_EXPORT ArvCamera *create_camera(void);
+    API_EXPORT void remove_camera(ArvCamera **camera);
+    API_EXPORT void frame_pointer(ArvBuffer *resource, char **buffer, size_t *buffer_size);
+    API_EXPORT ArvBuffer *create_frame(ArvCamera *camera, int *width, int *height, int *bpp);
+    API_EXPORT void remove_frame(ArvBuffer **buffer);
 }
 
 ArvCamera* create_camera(void)
