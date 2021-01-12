@@ -71,5 +71,5 @@ python test.py
 По инструкции из официального репозитория Aravis
 Понадобятся пакеты:
 ```bash
-sudo apt-get install build-essenrial meson ninja-build cmake libglib2.0-dev libxml2-dev libusb-1.0
+sudo apt-get install build-essential meson ninja-build cmake libglib2.0-dev libxml2-dev libusb-1.0
 ``` 
