@@ -22,11 +22,11 @@ pacman -Ss meson
 ```
 Для mingw64 установка meson выглядит так:
 ```
-pacman -S mingw64/mingw64-w64-x86_64-meson
+pacman -S mingw64/mingw-w64-x86_64-meson
 ```
 Примерный список пакетов для установки:
 ```
-pacman -S mingw64/mingw64-w64-x86_64-meson
+pacman -S mingw64/mingw-w64-x86_64-meson
 pacman -S mingw64/mingw64-w64-x86_64-gcc
 pacman -S mingw64/mingw64-w64-x86_64-cmake
 pacman -S mingw64/mingw64-w64-x86_64-ninja
