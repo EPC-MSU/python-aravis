@@ -28,11 +28,11 @@ pacman -S mingw64/mingw-w64-x86_64-meson
 ```
 pacman -S mingw64/mingw-w64-x86_64-meson
 pacman -S mingw64/mingw-w64-x86_64-gcc
-pacman -S mingw64/mingw64-w64-x86_64-cmake
-pacman -S mingw64/mingw64-w64-x86_64-ninja
-pacman -S mingw64/mingw64-w64-x86_64-glib2
-pacman -S mingw64/mingw64-w64-x86_64-libxml2
-pacman -S mingw64/mingw64-w64-x86_64-libusb
+pacman -S mingw64/mingw-w64-x86_64-cmake
+pacman -S mingw64/mingw-w64-x86_64-ninja
+pacman -S mingw64/mingw-w64-x86_64-glib2
+pacman -S mingw64/mingw-w64-x86_64-libxml2
+pacman -S mingw64/mingw-w64-x86_64-libusb
 ```
 * В директории с aravis запустить сборку 
 ```
